@@ -9,4 +9,8 @@ export class Item extends BaseEntity {
 
   @Column({ type: 'varchar', length: 300 })
   description: string;
+
+  @Column({ type: 'timestamptz' })
+  timestamp: Date;
+  
 }

@@ -29,7 +29,7 @@ class ConfigService {
     return mode != 'DEV';
   }
 
-  public getTypeOrmConfig(): TypeOrmModuleOptions {
+  public getTypeOrmConfig(): TypeOrmModuleOptions{
     return {
       type: 'postgres',
 
@@ -39,12 +39,13 @@ class ConfigService {
       password: this.getValue('POSTGRES_PASSWORD'),
       database: this.getValue('POSTGRES_DATABASE'),
 
-      entities: ['**/*.entity{.ts,.js}'],
+      entities: ['**/*.entity.ts'],
 
       migrationsTableName: 'migration',
 
       migrations: ['src/migration/*.ts'],
-
+      subscribers: [],
+      
 
       ssl: this.isProduction(),
     };

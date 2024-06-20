@@ -24,4 +24,5 @@ export abstract class BaseEntity {
 
     @Column({ type: 'varchar', length: 300, nullable: true })
     internalComment: string | null;
+    
 }

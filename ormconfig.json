@@ -6,11 +6,12 @@
   "password": "LIhLdvdXz3WYK1401Z",
   "database": "postgres",
   "entities": [
-    "**/*.entity{.ts,.js}"
+    "**/*.entity.ts"
   ],
   "migrationsTableName": "migration",
   "migrations": [
     "src/migration/*.ts"
   ],
+  "subscribers": [],
   "ssl": false
 }
